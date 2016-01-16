@@ -12,6 +12,7 @@ print """
             </title>
         </head>
         <body>
+            <h3>名詞に下線を引きます</h3>
             <p> """
 
 import treetaggerwrapper
