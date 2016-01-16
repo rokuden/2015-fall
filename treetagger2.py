@@ -9,39 +9,36 @@ print """
     <html>
         <head>
             <title>
-                treetagger(noun extract)
             </title>
         </head>
         <body>
-            <p>A soccer team <u>which</u> has played a game was going home. Unfortunately, since the driver was exhausted, the car crushes on a black luxury car on their way. Against to Miura which protected the younger generation and took all the responsibility -- the conditions of the private settlement to which the owner of a car and gangster Tanioka were sentenced ...
-            </p>
-        </body>
-    </html>
-    """
+            <p> """
+
 import treetaggerwrapper
 tagger = treetaggerwrapper.TreeTagger(TAGLANG='en',TAGDIR='/Users/Rokuden/Downloads/treetagger')
-tags = tagger.TagText(u"A soccer team which has played a game was going home. Unfortunately, since the driver was exhausted, the car crushes on a black luxury car on their way. Against Miura which protected the younger generation and took all the responsibility -- the conditions of the private settlement to which the owner of a car and gangster Tanioka were sentenced ...")
+tags = tagger.TagText(u"A soccer team which has played a game was going home. Unfortunately, since the driver was exhausted, the car crushes on a black luxury car on their way. Against Miura who protected the younger generation and took all the responsibility -- the conditions of the private settlement to which the owner of a car and gangster Tanioka were sentenced ...")
+
 for tag in tags:
     tag_split = tag.split("	")
     if tag_split[1] == "NN":
-        print "<html><body><p><u>"
+        print "<u>"
         print (tag_split[0])
-        print "</u></p></body></html>"
+        print "</u>"
     elif tag_split[1] == "NP":
-        print "<html><body><p><u>"
+        print "<u>"
         print (tag_split[0])
-        print "</u></p></body></html>"
+        print "</u>"
     elif tag_split[1] == "NNS":
-        print "<html><body><p><u>"
+        print "<u>"
         print (tag_split[0])
-        print "</u></p></body></html>"
+        print "</u>"
     elif tag_split[1] == "NPS":
-        print "<html><body><p>"
+        print "<u>"
         print (tag_split[0])
-        print "</u></p></body></html><u>"
+        print "</u>"
     else:
-        print "<html><body><p>"
         print (tag_split[0])
-        print "</p></body></html>"
-
+print "</p>"
+print "</body>"
+print "</html>"
 
