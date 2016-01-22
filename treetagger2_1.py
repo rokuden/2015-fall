@@ -26,35 +26,27 @@ for tag in tags:
     #print tag_split[1]
     if tag_split[1] == "NN":
         print "<u>"
-        print """<span onClick="str = '"""
-        print (tag_split[0])
-        print """';clickN()";>"""
+        print """<span onClick="str = '"""+(tag_split[0])+"""';clickN()">"""
         print (tag_split[0])
         print "</span>"
         print "</u>"
         #print("NOUN")
     elif tag_split[1] == "NP":
         print "<u>"
-        print """<span onClick="str = '"""
-        print (tag_split[0])
-        print """';clickN()";>"""
+        print """<span onClick="str = '"""+(tag_split[0])+"""';clickN()">"""
         print (tag_split[0])
         print "</span>"
         print "</u>"
         #print("PROPER NOUN")
     elif tag_split[1] == "NNS":
         print "<u>"
-        print """<span onClick="str = '"""
-        print (tag_split[0])
-        print """';clickN()";>"""
+        print """<span onClick="str = '"""+(tag_split[0])+"""';clickN()">"""
         print (tag_split[0])
         print "</span>"
         print "</u>"
     elif tag_split[1] == "NPS":
         print "<u>"
-        print """<span onClick="str = '"""
-        print (tag_split[0])
-        print """';clickN()";>"""
+        print """<span onClick="str = '"""+(tag_split[0])+"""';clickN()">"""
         print (tag_split[0])
         print "</span>"
         print "</u>"
